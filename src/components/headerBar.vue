@@ -1,6 +1,6 @@
 <!--suppress ALL -->
 <template lang="pug">
-    .right-block
+.right-block
   .right-block-header
     .right-block-header-left
       label.title-name Website Redesign
@@ -25,9 +25,9 @@
 </template>
 
 <script>
-import Contents from "./contents";
+import Contents from './contents';
 export default {
-  name: "headerBar",
+  name: 'headerBar',
   components: { Contents }
 };
 </script>

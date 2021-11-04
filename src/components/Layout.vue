@@ -15,17 +15,15 @@ export default {
     navBar,
     headerBar
   },
-  data(){
-    return{
-
-    }
-  },
-  methods:{
-
-  },
-  mounted() {
-
-  }
+   data(){
+  return{
+  //   },
+  // methods:{
+  //
+  // },
+  // mounted() {
+  //
+  // }
 }
 </script>
 
