@@ -14,16 +14,7 @@ export default {
   components: {
     navBar,
     headerBar
-  },
-   data(){
-  return{
-  //   },
-  // methods:{
-  //
-  // },
-  // mounted() {
-  //
-  // }
+  }
 }
 </script>
 
