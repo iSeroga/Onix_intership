@@ -1,8 +1,8 @@
-<template>
-  <div class="first-block">
-    <nav-bar/>
-    <header-bar/>
-  </div>
+<template lang="pug">
+.first-block
+  nav-bar
+  header-bar
+
 </template>
 
 <script>

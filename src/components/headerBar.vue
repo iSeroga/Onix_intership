@@ -1,4 +1,4 @@
-<!--suppress ALL -->
+<!--suppress HtmlUnknownTarget -->
 <template lang="pug">
 .right-block
   .right-block-header
@@ -24,12 +24,25 @@
     Contents
 </template>
 
-<script>
-import Contents from './contents';
+<script lang="ts">
+import Contents from './contents.vue'
 export default {
   name: 'headerBar',
-  components: { Contents }
-};
+  components: { Contents },
+  mounted () {
+    const navItem = document.querySelectorAll('.second-header-choose')
+    let activNavItem = document.querySelector('.second-header-choose.active')
+    navItem.forEach(navitem => {
+      navitem.addEventListener('click', function () {
+        navitem.classList.add('active')
+        if (activNavItem != null) {
+          activNavItem.classList.remove('active')
+        }
+        activNavItem = navitem
+      })
+    })
+  }
+}
 </script>
 
 <style scoped></style>

@@ -59,17 +59,50 @@
   //      img(src='../assets/img/dwegalochki.svg' alt='dwegalochki')
   //      input#reveal(type='button' value='Hidden-menu')
   //    span.site-name2 PROJECTUS
+.ask
+  .ask-content
+    p
+      | Are u sure u want to change number of tasks?
+    input.YesB(type='button' value='Yes')
+    input.NoB(type='button' value='No')
 </template>
 
 <script lang="ts">
-export default {
+import { defineComponent } from 'vue'
+export default defineComponent({
   name: 'navBar',
-  data(){
-    return{
-      name:'Joan Gonzales'
-    }
-  }
-}
-</script>
 
+  data () {
+    return {
+      name: 'Joan Gonzales'
+    }
+  },
+  mounted () {
+    const askWindow = document.querySelector('.ask')!
+    const closedNumbDesktop = document.querySelector('.closed')!// 374
+    const openTaskDesktop = document.querySelector('.openB')!// 72
+    closedNumbDesktop.addEventListener('click', () => {
+      askWindow.classList.toggle('open-window')
+    })
+    const yesBtn = document.querySelector('.YesB')!
+    const noBtn = document.querySelector('.NoB')!
+    let numberOpen = Number(openTaskDesktop.textContent)
+    let numberClosed = Number(closedNumbDesktop.textContent)
+    yesBtn.addEventListener('click', () => {
+      if (numberOpen > 0) {
+        numberOpen = numberOpen - 1
+        numberClosed = +numberClosed + 1
+        askWindow.classList.toggle('open-window')
+      } else {
+        askWindow.classList.toggle('open-window')
+      }
+      openTaskDesktop.innerHTML = String(numberOpen)
+      closedNumbDesktop.innerHTML = String(numberClosed)
+    })
+    noBtn.addEventListener('click', () => {
+      askWindow.classList.toggle('open-window')
+    })
+  }
+})
+</script>
 <style scoped></style>
