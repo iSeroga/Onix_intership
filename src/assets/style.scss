@@ -330,6 +330,8 @@ a{
 }
 
 .content-text{
+  display: flex;
+  position: relative;
   margin-top: 30px;
   padding: 0 60px 0 50px;
   font-size: 18px;
@@ -357,10 +359,14 @@ a{
   background-position: center;
 }
 
-.time1,
-.time2,
-.time3{
-  position: relative;
+.time{
+  position: absolute;
+  opacity: 0.7;
+  font-size: 15px;
+  color: #131313;
+  text-align: right;
+  line-height: 20px;
+  right: 0 ;
 }
 
 .time1:after{
@@ -519,8 +525,9 @@ a{
 .photos img{
   width: 105px;
   height: 105px;
+  margin-left: 20px;
   margin-right: 10px;
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .left-block2{

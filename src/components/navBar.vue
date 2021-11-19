@@ -29,7 +29,7 @@
     p My Tasks
     br
     p.message Notifications
-    .counter
+    //.counter(v-for="(index, idx1) in ImagesNature" :key="idx1") {{ notification }}
   //.left-block2
   //  .mobile-menu
   //    .user-photo
